@@ -35,9 +35,42 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
-	circleNavbarIcon: {
+	NavbarIcon: {
 		width: 25,
 		height: 25
+	},
+	containerWeeks: {
+		padding: 50
+	},
+	semana: {
+		height: 100,
+		borderRadius: 5,
+		marginVertical: 15,
+		flexDirection: 'row',
+		alignItems: 'center',
+		paddingHorizontal: 25,
+		position: 'relative'
+	},
+	tituloSemana: {
+		fontSize: 30,
+		fontWeight: 'bold',
+		color: 'white'
+	},
+	preguntasPorSemana: {
+		color: 'white'
+	},
+	imgSemana: {
+		height: 120,
+		position: 'absolute',
+		bottom: 0,
+		right: 15
+	},
+	titleWeeks: {
+		textAlign: 'center',
+		fontSize: 30,
+		fontWeight: '700',
+		color: '#262626',
+		marginBottom: 15
 	}
 })
 

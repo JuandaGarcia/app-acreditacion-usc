@@ -15,7 +15,7 @@ const Navbar = () => {
 				style={styles.btnNavbar}
 			>
 				<Image
-					style={styles.circleNavbarIcon}
+					style={styles.NavbarIcon}
 					source={require('../img/qrcode.png')}
 				/>
 			</TouchableHighlight>
@@ -27,7 +27,7 @@ const Navbar = () => {
 				style={styles.circleNavbar}
 			>
 				<Image
-					style={styles.circleNavbarIcon}
+					style={styles.NavbarIcon}
 					source={require('../img/gamepad.png')}
 				/>
 			</TouchableHighlight>
@@ -39,7 +39,7 @@ const Navbar = () => {
 				style={styles.btnNavbar}
 			>
 				<Image
-					style={styles.circleNavbarIcon}
+					style={styles.NavbarIcon}
 					source={require('../img/trofeo.png')}
 				/>
 			</TouchableHighlight>
