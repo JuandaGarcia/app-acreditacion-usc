@@ -1,12 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native'
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center'
-	},
 	containerNavbar: {
 		width: Dimensions.get('window').width,
 		height: 70,
@@ -16,7 +10,8 @@ const styles = StyleSheet.create({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-around',
-		flexDirection: 'row'
+		flexDirection: 'row',
+		zIndex: 4000
 	},
 	circleNavbar: {
 		width: 65,
@@ -39,11 +34,25 @@ const styles = StyleSheet.create({
 		width: 25,
 		height: 25
 	},
+	NavbarIconGray: {
+		width: 25,
+		height: 25,
+		opacity: 0.5
+	},
 	containerWeeks: {
 		padding: 50
 	},
 	semana: {
 		height: 100,
+		borderRadius: 5,
+		marginVertical: 15,
+		flexDirection: 'row',
+		alignItems: 'center',
+		paddingHorizontal: 25,
+		position: 'relative'
+	},
+	HeaderRanking: {
+		height: 125,
 		borderRadius: 5,
 		marginVertical: 15,
 		flexDirection: 'row',
