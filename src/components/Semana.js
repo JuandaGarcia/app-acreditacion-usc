@@ -2,8 +2,10 @@ import React from 'react'
 import { View, Text, Image, TouchableHighlight } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import styles from '../styles'
+import { useHistory } from 'react-router-native'
 
 const Semana = props => {
+	const history = useHistory()
 	const Images = [
 		require('../img/semana1.png'),
 		require('../img/semana2.png'),
@@ -18,7 +20,12 @@ const Semana = props => {
 	]
 
 	return (
-		<TouchableHighlight>
+		<TouchableHighlight
+			underlayColor="transparent"
+			onPress={() => {
+				history.push(`/preguntas-semana/${props.numeroSemana}`)
+			}}
+		>
 			<LinearGradient
 				colors={Colors[props.numeroSemana - 1]}
 				start={[0, 0]}

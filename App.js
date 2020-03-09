@@ -4,6 +4,7 @@ import Weeks from './src/screens/Weeks'
 import ScanQR from './src/screens/ScanQR'
 import Ranking from './src/screens/Ranking'
 import Layout from './src/components/Layout'
+import PreguntasSemana from './src/screens/PreguntasSemana'
 
 const App = () => {
 	return (
@@ -13,6 +14,11 @@ const App = () => {
 					<Route exact path="/" component={Weeks} />
 					<Route exact path="/scan-qr" component={ScanQR} />
 					<Route exact path="/ranking" component={Ranking} />
+					<Route
+						exact
+						path="/preguntas-semana/:numero"
+						component={PreguntasSemana}
+					/>
 				</Switch>
 			</Layout>
 		</NativeRouter>
