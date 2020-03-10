@@ -45,4 +45,4 @@ const Semana = props => {
 	)
 }
 
-export default Semana
+export default Semana;

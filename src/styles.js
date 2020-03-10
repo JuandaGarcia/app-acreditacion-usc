@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
 	containerNavbar: {
@@ -211,4 +211,4 @@ const styles = StyleSheet.create({
 	}
 })
 
-export default styles
+export default styles;
