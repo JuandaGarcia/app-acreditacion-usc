@@ -6,6 +6,11 @@ import Ranking from "./src/screens/Ranking";
 import Layout from "./src/components/Layout";
 import PreguntasSemana from "./src/screens/PreguntasSemana";
 
+import Preguntas from "./src/models/preguntas/Preguntas";
+var preguntas = new Preguntas();
+
+alert(preguntas.buscarPorSemana(1)[13].title);
+
 const App = () => {
   return (
     <NativeRouter>

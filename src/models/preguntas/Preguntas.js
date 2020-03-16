@@ -12,10 +12,16 @@ export default class Preguntas {
   }
 
   cantPorSemana(semana) {
-    var cantSem = 0;
+    return this.buscarPorSemana(semana).length;
+  }
 
-    for (let i = 0; i < this.size; i++)
-      if (this.jsonPreguntas[i].week == semana) cantSem++;
-    return cantSem;
+  buscarPorSemana(semana) {
+    var preguntasSemana = [];
+
+    for (let i = 0; i < this.size - 1; i++)
+      if (this.jsonPreguntas[i].week == semana)
+        preguntasSemana.push(this.jsonPreguntas[i]);
+
+    return preguntasSemana;
   }
 }
