@@ -3,13 +3,11 @@
     require_once("./conectarBD.php");
 
     // Se reciben valores por GET
-    $id = $_GET['id'];
-    $puntaje = $_GET['puntaje'];
-    // Se define un objeto
+    $preguntas = $_GET['preguntas'];
     $obj = new \stdClass();
 
     try {
-        conectarBD::conexion()->query("UPDATE usuario SET usu_pun=$puntaje WHERE usu_ide = $id");
+        conectarBD::conexion()->query("UPDATE usuario SET usu_res=$preguntas WHERE usu_ide = $id");
         $obj->bandera = true;
     } catch (exception $e) {
         die();
