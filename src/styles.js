@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from 'react-native'
 
 const styles = StyleSheet.create({
 	containerNavbar: {
@@ -166,12 +166,34 @@ const styles = StyleSheet.create({
 	contenedorNumerosPreguntas: {
 		display: 'flex',
 		flexDirection: 'row',
-		justifyContent: 'space-between',
 		marginTop: 35
 	},
 	letrasNumerosPreguntas: {
 		fontSize: 20,
 		fontWeight: 'bold'
+	},
+	letrasNumerosPreguntasWhite: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		color: 'white'
+	},
+	PreguntaSelected: {
+		marginRight: 35,
+		backgroundColor: '#F4B2FF',
+		height: 40,
+		width: 40,
+		borderRadius: 25,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	PreguntaNoSelected: {
+		marginRight: 35,
+		height: 40,
+		width: 40,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center'
 	},
 	lineaNumerosPreguntas: {
 		opacity: 0.2,
@@ -182,6 +204,14 @@ const styles = StyleSheet.create({
 		top: 140,
 		right: 0,
 		left: 0
+	},
+	flechaNumerosPreguntas: {
+		opacity: 0.1,
+		position: 'absolute',
+		top: 95,
+		right: 15,
+		fontSize: 30,
+		fontWeight: 'bold'
 	},
 	imgPregunta: {
 		width: 100,
@@ -208,7 +238,10 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		paddingHorizontal: 20
+	},
+	flex: {
+		display: 'flex'
 	}
 })
 
-export default styles;
+export default styles

@@ -1,7 +1,8 @@
-import React from 'react'
-import { View, Text, Image, TouchableHighlight } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import { View, Text, Image, TouchableHighlight, ScrollView } from 'react-native'
 import styles from '../styles'
 import { useHistory } from 'react-router-native'
+import Preguntas from '../models/preguntas/Preguntas'
 
 const Respuesta = props => {
 	return (
@@ -13,6 +14,18 @@ const Respuesta = props => {
 
 const PreguntasSemana = ({ match }) => {
 	const history = useHistory()
+	const preguntas = new Preguntas()
+	const semana = match.params.numero
+	const [PreguntaActual, setPreguntaActual] = useState(0)
+	let Respuestas = [
+		preguntas.buscarPorSemana(semana)[PreguntaActual].correctOpc,
+		preguntas.buscarPorSemana(semana)[PreguntaActual].opc1,
+		preguntas.buscarPorSemana(semana)[PreguntaActual].opc2,
+		preguntas.buscarPorSemana(semana)[PreguntaActual].opc3
+	].sort(() => {
+		return Math.random() - 0.5
+	})
+
 	return (
 		<View style={styles.containerWeeks}>
 			<TouchableHighlight
@@ -23,20 +36,51 @@ const PreguntasSemana = ({ match }) => {
 			>
 				<View style={styles.backContainer}>
 					<Image style={styles.backImage} source={require('../img/back.png')} />
-					<Text style={styles.bold}>
-						Preguntas de la semana {match.params.numero}
-					</Text>
+					<Text style={styles.bold}>Preguntas de la semana {semana}</Text>
 				</View>
 			</TouchableHighlight>
-			<View style={styles.contenedorNumerosPreguntas}>
-				<Text style={styles.letrasNumerosPreguntas}>1</Text>
-				<Text style={styles.letrasNumerosPreguntas}>2</Text>
-				<Text style={styles.letrasNumerosPreguntas}>3</Text>
-				<Text style={styles.letrasNumerosPreguntas}>4</Text>
-				<Text style={styles.letrasNumerosPreguntas}>5</Text>
-				<Text style={styles.letrasNumerosPreguntas}>6</Text>
-				<Text style={styles.letrasNumerosPreguntas}>7</Text>
-			</View>
+			<ScrollView horizontal={true} style={styles.contenedorNumerosPreguntas}>
+				{preguntas.buscarPorSemana(semana).map(pregunta => {
+					if (
+						preguntas.buscarPorSemana(semana).indexOf(pregunta) ===
+						PreguntaActual
+					) {
+						return (
+							<TouchableHighlight
+								key={pregunta.id}
+								style={styles.PreguntaSelected}
+								underlayColor="transparent"
+								onPress={() => {
+									setPreguntaActual(
+										preguntas.buscarPorSemana(semana).indexOf(pregunta)
+									)
+								}}
+							>
+								<Text style={styles.letrasNumerosPreguntasWhite}>
+									{preguntas.buscarPorSemana(semana).indexOf(pregunta) + 1}
+								</Text>
+							</TouchableHighlight>
+						)
+					}
+					return (
+						<TouchableHighlight
+							underlayColor="transparent"
+							onPress={() => {
+								setPreguntaActual(
+									preguntas.buscarPorSemana(semana).indexOf(pregunta)
+								)
+							}}
+							key={pregunta.id}
+							style={styles.PreguntaNoSelected}
+						>
+							<Text style={styles.letrasNumerosPreguntas}>
+								{preguntas.buscarPorSemana(semana).indexOf(pregunta) + 1}
+							</Text>
+						</TouchableHighlight>
+					)
+				})}
+			</ScrollView>
+			<Text style={styles.flechaNumerosPreguntas}>→</Text>
 			<View style={styles.lineaNumerosPreguntas}></View>
 			<View style={styles.imgPreguntaContainer}>
 				<Image
@@ -45,12 +89,12 @@ const PreguntasSemana = ({ match }) => {
 				/>
 			</View>
 			<Text style={styles.eunciadoPregunta}>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+				{preguntas.buscarPorSemana(semana)[PreguntaActual].title}
 			</Text>
-			<Respuesta texto={'Lorem'}></Respuesta>
-			<Respuesta texto={'Lorem'}></Respuesta>
-			<Respuesta texto={'Lorem'}></Respuesta>
-			<Respuesta texto={'Lorem'}></Respuesta>
+			<Respuesta texto={Respuestas[0]}></Respuesta>
+			<Respuesta texto={Respuestas[1]}></Respuesta>
+			<Respuesta texto={Respuestas[2]}></Respuesta>
+			<Respuesta texto={Respuestas[3]}></Respuesta>
 		</View>
 	)
 }

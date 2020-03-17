@@ -1,0 +1,612 @@
+[
+  {
+    "id": 1,
+    "title": "Uno de los aspectos por medio de los cuales se evidencia la flexibilidad curricular es:",
+    "correctOpc": "Cursos internacionales",
+    "opc1": "Biblioteca",
+    "opc2": "Bienestar",
+    "opc3": "Financiación",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 2,
+    "title": "¿Cuáles son las funciones misionales de la USC?",
+    "correctOpc": "Docencia, investigación y Extensión",
+    "opc1": "Internacionalización, bienestar, administración",
+    "opc2": "Administración, autorregulación, autoevaluación",
+    "opc3": "Autoevaluación, administración y gestión",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 3,
+    "title": "¿Qué documento define, entre otros, los deberes y derechos de los estudiantes?",
+    "correctOpc": "Reglamento Estudiantil",
+    "opc1": "Política de inclusión",
+    "opc2": "Reglamento de Bienestar",
+    "opc3": "PEI",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 4,
+    "title": "En los últimos años la USC  ha incrementado la contratación de Profesores de tiempo completo con formación en…",
+    "correctOpc": "Maestría y Doctorado",
+    "opc1": "Especialización",
+    "opc2": "Profesionales",
+    "opc3": "Tecnólogos",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 5,
+    "title": "¿Qué documento define, entre otros, los deberes y derechos de los profesores, sus modalidades de vinculación y escalafón?",
+    "correctOpc": "Reglamento Profesoral",
+    "opc1": "Política de evaluación docente",
+    "opc2": "Política de Escalafón",
+    "opc3": "Reglamento Interno de trabajo",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 6,
+    "title": "¿Cuál fue el primer programa de pregrado en la USC? ",
+    "correctOpc": "Derecho",
+    "opc1": "Administración de Empresas ",
+    "opc2": "Licenciatura en Educación Infantil",
+    "opc3": "Medicina",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 7,
+    "title": "¿Cuál fue el primer programa de Doctorado de la USC?",
+    "correctOpc": "Doctorado en Educación",
+    "opc1": "Doctorado en Derecho",
+    "opc2": "Doctorado en Ciencias Aplicadas",
+    "opc3": "Doctorado en Ciencias Económicas",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 8,
+    "title": "El Programa Institucional para la Permanencia Estudiantil de la USC se conoce como...",
+    "correctOpc": "PIPE",
+    "opc1": "PAES",
+    "opc2": "PISA",
+    "opc3": "RELEVO GENERACIONAL",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 9,
+    "title": "¿Cuántas líneas tiene el Plan Estratégico de Desarrollo Institucional PEDI 2014-2024?",
+    "correctOpc": "4",
+    "opc1": "5",
+    "opc2": "8",
+    "opc3": "9",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 10,
+    "title": "¿Por cuántos años el Ministerio de Educación Nacional otorga la acreditación institucional?",
+    "correctOpc": "4, 6, 8 o 10",
+    "opc1": "4 o 6",
+    "opc2": "6 o 9",
+    "opc3": "7",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 11,
+    "title": "¿Cuáles son los elementos del modelo de autoevaluación de la USC?",
+    "correctOpc": "Percepción y Opinión de Públicos; Existencia y Valoración de Evidencias; Juicio Experto",
+    "opc1": "Encuestas; Valoración de Evidencias",
+    "opc2": "Encuestas; Valoración de Evidencias; Fichas de Reflexión",
+    "opc3": "Valoración de Evidencias; Fichas de Reflexión; Juicio Experto",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 12,
+    "title": "La USC manifiesta su compromiso con la Calidad y ello es expresado como un Principio en…",
+    "correctOpc": "Proyecto Educativo Institucional",
+    "opc1": "Estatuto General",
+    "opc2": "Reglamento de Bienestar",
+    "opc3": "Reglamento Profesoral",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 13,
+    "title": "¿Cuál es el nombre de la Biblioteca de la USC en Cali?",
+    "correctOpc": "Santiago Cadena Copete",
+    "opc1": "Guillermo Col Salazar ",
+    "opc2": "Estanislao Zuleta",
+    "opc3": "Jafet Morales",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 14,
+    "title": "Para qué sirve el Sistema de Alertas Tempranas -SIAT",
+    "correctOpc": "Caracterizar sociodemográfica a los aspirantes e identificar alertas tempranas que puedan conllevar a la deserción",
+    "opc1": "Caracterizar a los egresados y conocer sus tasas de cotización y salarios",
+    "opc2": "Caracterizar a los empleados y definir cursos de actualización",
+    "opc3": "Caracterizar a los profesores y ofrecer cursos desde Rutas de Formación ",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 15,
+    "title": "¿Cómo se denomina la agencia encargada de los procesos de Acreditación en Colombia?",
+    "correctOpc": "Consejo Nacional de Acreditación (CNA)",
+    "opc1": "Comisión Nacional Intersectorial de Aseguramiento de la Calidad de la Educación Superior (CONACES)",
+    "opc2": "Consejo Profesional de Calidad (CPC)",
+    "opc3": "Comité de Aseguramiento de la Calidad de Colombia (CACC)",
+    "points": 5,
+    "week": 1
+  },
+  {
+    "id": 16,
+    "title": "El proceso de socialización de resultados de la Autoevaluación Institucional, está dirigido a…",
+    "correctOpc": "Toda la Comunidad Universitaria",
+    "opc1": "Profesores",
+    "opc2": "Estudiantes",
+    "opc3": "Egresados",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 17,
+    "title": "El proceso de autoevaluación institucional ratifica la coherencia entre:",
+    "correctOpc": "Misión, Visión y Principios declarados en el Proyecto Educativo Institucional",
+    "opc1": "Reglamento Estudiantil",
+    "opc2": "Reglamento Profesoral",
+    "opc3": "Reglamento de Bienestar",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 18,
+    "title": "¿Cuál es la línea 1 del Plan Estratégico de Desarrollo Institucional 2014-2024?",
+    "correctOpc": "Academia con Calidad y Pertinencia",
+    "opc1": "Visibilidad, pertinencia e impacto institucional",
+    "opc2": "Investigación e Innovación para la excelencia",
+    "opc3": "Gestión para la excelencia institucional",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 19,
+    "title": "Cuál es la línea 2 del Plan Estratégico de Desarrollo Institucional 2014-2024",
+    "correctOpc": "Investigación e Innovación para la excelencia",
+    "opc1": "Visibilidad, pertinencia e impacto institucional",
+    "opc2": "Academia con Calidad y Pertinencia",
+    "opc3": "Gestión para la excelencia institucional",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 20,
+    "title": "El Programa de Actualización al Egresado Santiaguino se conoce como…",
+    "correctOpc": "PAES",
+    "opc1": "SIAT",
+    "opc2": "PISA",
+    "opc3": "PIPE",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 21,
+    "title": "Una de las estrategias de relación de la USC con los graduados es:",
+    "correctOpc": "Bolsa de Empleo ",
+    "opc1": "SIAT",
+    "opc2": "OTRI",
+    "opc3": "DGI",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 22,
+    "title": "Los Centros para el mejoramiento de las competencias de lectura, escritura y lenguaje de la USC son",
+    "correctOpc": "CEEL y CELOA",
+    "opc1": "SIAT",
+    "opc2": "PIPE",
+    "opc3": "PAES",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 23,
+    "title": "El nombre del actual Rector de la USC es…",
+    "correctOpc": "Carlos Andrés Pérez Galindo",
+    "opc1": "Santiago Cadena Copete",
+    "opc2": "Álvaro Pío Valencia",
+    "opc3": "Guillermo Coll Salazar",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 24,
+    "title": "Uno de los principios  institucionales de la USC, definido en su Proyecto Educativo Institucional es…",
+    "correctOpc": "Inclusión",
+    "opc1": "Transparencia",
+    "opc2": "Integralidad",
+    "opc3": "Flexibilidad",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 25,
+    "title": "El Comité orientado a promover las relaciones cordiales y el ambiente armónico de trabajo de la comunidad Santiaguina es:",
+    "correctOpc": "Comité de Convivencia",
+    "opc1": "Comité Ambiental",
+    "opc2": "Comité Institucional de Autoevaluación y Calidad",
+    "opc3": "Comité Central de Currículo",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 26,
+    "title": "Cuál es la línea 3 del Plan Estratégico de Desarrollo Institucional 2014-2024",
+    "correctOpc": "Visibilidad, pertinencia e impacto institucional",
+    "opc1": "Academia con Calidad y Pertinencia",
+    "opc2": "Investigación e Innovación para la excelencia",
+    "opc3": "Gestión para la excelencia institucional",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 27,
+    "title": "Cuál es la línea 4 del Plan Estratégico de Desarrollo Institucional 2014-2024",
+    "correctOpc": "Gestión para la excelencia institucional",
+    "opc1": "Visibilidad, pertinencia e impacto institucional",
+    "opc2": "Investigación e Innovación para la excelencia",
+    "opc3": "Academia con Calidad y Pertinencia",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 28,
+    "title": "¿Cuántos miembros tiene el Consejo Superior por el estamento de profesores?",
+    "correctOpc": "8",
+    "opc1": "6",
+    "opc2": "7",
+    "opc3": "10",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 29,
+    "title": "¿Cuántos miembros tiene el Consejo Superior por el estamento de estudiantes?",
+    "correctOpc": "8",
+    "opc1": "6",
+    "opc2": "7",
+    "opc3": "10",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 30,
+    "title": "¿Cuántos miembros tiene el Consejo Superior por el estamento de egresados?",
+    "correctOpc": "8",
+    "opc1": "6",
+    "opc2": "7",
+    "opc3": "10",
+    "points": 5,
+    "week": 2
+  },
+  {
+    "id": 31,
+    "title": "¿Cuántos programas con acreditación nacional tiene la USC en la actualidad?",
+    "correctOpc": "10",
+    "opc1": "Ninguno",
+    "opc2": "8",
+    "opc3": "5",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 32,
+    "title": "¿Cuántos programas de Maestría tiene la USC?",
+    "correctOpc": "11",
+    "opc1": "Ninguno",
+    "opc2": "24",
+    "opc3": "38",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 33,
+    "title": "¿Cuántos programas de Doctorado tiene la USC?",
+    "correctOpc": "3",
+    "opc1": "Ninguno",
+    "opc2": "1",
+    "opc3": "2",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 34,
+    "title": "¿Cuántos son los factores definidos en los lineamientos de acreditación institucional del CNA?",
+    "correctOpc": "12",
+    "opc1": "10",
+    "opc2": "9",
+    "opc3": "15",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 35,
+    "title": "¿Cuál es la característica adicional incorporada por la USC en su modelo de autoevaluación institucional?",
+    "correctOpc": "Universidad comprometida con la protección ambiental",
+    "opc1": "Universidad Saludable",
+    "opc2": "Universidad Incluyente",
+    "opc3": "Universidad Libre de Humo",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 36,
+    "title": "¿Cuántos Centros de Estudio e Investigación tiene la USC?",
+    "correctOpc": "7",
+    "opc1": "5",
+    "opc2": "6",
+    "opc3": "8",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 37,
+    "title": "¿Cuántas Facultades tiene la USC?",
+    "correctOpc": "7",
+    "opc1": "5",
+    "opc2": "6",
+    "opc3": "9",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 38,
+    "title": "¿Cuáles programas de la USC cuentan con acreditación internacional?",
+    "correctOpc": "Comunicación Social; Publicidad",
+    "opc1": "Ninguno",
+    "opc2": "Administración de Empresas ",
+    "opc3": "Licenciatura en Lenguas Extranjeras con énfasis en Inglés - Francés",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 39,
+    "title": "¿Qué Facultad de la USC tiene el mayor número de programas con acreditación nacional?",
+    "correctOpc": "Ingeniería",
+    "opc1": "Comunicación y Publicidad",
+    "opc2": "Educación",
+    "opc3": "Ciencias Económicas y Empresariales",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 40,
+    "title": "Ciencias Económicas y Empresariales",
+    "correctOpc": "Voluntario",
+    "opc1": "Obligatorio",
+    "opc2": "Impuesto",
+    "opc3": "Requerido para seguir funcionando",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 41,
+    "title": "Es un espacio académico que permite generar identidad y sentido de pertinencia institucional alrededor del cogobierno y los preceptos de vocación y espíritu santiaguino orientados a su formación integral",
+    "correctOpc": "Cátedra Santiaguina",
+    "opc1": "Deporte Formativo",
+    "opc2": "Arte y Cultura",
+    "opc3": "Trabajo de Grado",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 42,
+    "title": "La matrícula de honor para los estudiantes de pregrado representa…",
+    "correctOpc": "El reconocimiento a su esfuerzo académico, a partir de becas a los dos (2) mejores promedios de cada semestre",
+    "opc1": "Un descuento en la matrícula para estudiar un posgrado",
+    "opc2": "Un reconocimiento que se hace por una única vez a los mejores estudiantes",
+    "opc3": "Un descuento en la matrícula para hacer un Diplomado",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 43,
+    "title": "Es el único programa del país con esa denominación y está en la USC",
+    "correctOpc": "Especialización en Aplicación y Tecnología de Drones",
+    "opc1": "Especialización en Sistemas Aeroespaciales",
+    "opc2": "Especialización en Sistemas de Información Geográfica",
+    "opc3": "Especialización en Gerencia Logística Integral ",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 44,
+    "title": "El nombre del actual Vicerrector Académico de la USC es…",
+    "correctOpc": "Jorge Antonio Silva Leal",
+    "opc1": "Estanislao Zuleta",
+    "opc2": "Santiago Cadena Copete",
+    "opc3": "Pedro Elías Serrano",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 45,
+    "title": "El nombre de la actual Vicerrectora Administrativa de la USC es…",
+    "correctOpc": "Zonia Velasco Ramírez",
+    "opc1": "María del Carmen Salinas",
+    "opc2": "Teresa Gutiérrez",
+    "opc3": "Ana María Medina ",
+    "points": 5,
+    "week": 3
+  },
+  {
+    "id": 46,
+    "title": "Son elementos de la actual misión de la USC…",
+    "correctOpc": "Todos son elementos de la Misión de la USC",
+    "opc1": "Formar personas integras",
+    "opc2": "Contribuir a la equidad social y el desarrollo sostenible",
+    "opc3": "Perspectiva humanista, analítica, incluyente y critica",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 47,
+    "title": "Son elementos de la actual visión de la USC…",
+    "correctOpc": "Ser una institución de excelencia en su vocación formativa, que educa para una sociedad responsable",
+    "opc1": "En 2027 será reconocida nacional e internacionalmente por su excelente servicio a la sociedad, los territorios y la sostenibilidad ambiental",
+    "opc2": "Una de las mejores universidades de América Latina",
+    "opc3": "Referente para el desarrollo regional",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 48,
+    "title": "¿Cuántos son los principios institucionales que define la USC?",
+    "correctOpc": "7",
+    "opc1": "2",
+    "opc2": "5",
+    "opc3": "9",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 49,
+    "title": "Es la primera autoridad ejecutiva de la USC; le corresponde la dirección y orientación de la política universitaria",
+    "correctOpc": "Rector",
+    "opc1": "Consejo Superior ",
+    "opc2": "Presidente del Consejo Superior",
+    "opc3": "Consejo Académico",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 50,
+    "title": "Es el encargado de velar por el cumplimiento de la Constitución Nacional, la Ley de la Educación Superior, el Estatuto, los reglamentos y las decisiones del Consejo Superior Universitario",
+    "correctOpc": "Presidente del Consejo Superior",
+    "opc1": "Presidente del Consejo Académico",
+    "opc2": "Rector",
+    "opc3": "Presidente de la Comisión de asuntos estatutarios y normativos del Consejo Superior",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 51,
+    "title": "Tiene a su cargo la dirección de los asuntos académicos en la Universidad; orienta la política de docencia, investigación, extensión y proyección social; vela por el funcionamiento y cumplimiento de los reglamentos Docente y Estudiantil",
+    "correctOpc": "Vicerrector Académico",
+    "opc1": "Rector",
+    "opc2": "Vicerrector Administrativo",
+    "opc3": "Director de Planeación y Desarrollo",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 52,
+    "title": "Es la autoridad académica y administrativa de la facultad, conforme a lo dispuesto en el Estatuto General y en los demás reglamentos internos de la Universidad",
+    "correctOpc": "Decano",
+    "opc1": "Director de Programa",
+    "opc2": "Secretario Académico",
+    "opc3": "Coordinador del Centro de Investigaciones",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 53,
+    "title": "Lidera, gestiona y coordina los procesos investigativos en la Universidad",
+    "correctOpc": "Director General de Investigaciones",
+    "opc1": "Coordinador del Centro de Investigaciones",
+    "opc2": "Líder del grupo de investigación",
+    "opc3": "Coordinador del Semillero de Investigación",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 54,
+    "title": "Es el responsable del manejo de la política y gestión de Bienestar Universitario",
+    "correctOpc": "Director de Bienestar Universitario",
+    "opc1": "Coordinador de Deportes",
+    "opc2": "Coordinador de Arte y Cultura",
+    "opc3": "Coordinador de Bienestar Universitario",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 55,
+    "title": "Más del 80% de los estudiantes de pregrado de la USC pertenecen a los estratos",
+    "correctOpc": "1, 2 y 3",
+    "opc1": "1 y 2",
+    "opc2": "3 y 4",
+    "opc3": "4, 5 y 6",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 56,
+    "title": "Son estímulos para enaltecer e impulsar los desempeños sobresalientes de estudiantes, en aspectos culturales, científicos y deportivos",
+    "correctOpc": "Matrícula de honor, Becas a deportistas; monitores",
+    "opc1": "Descuentos por pronto pago",
+    "opc2": "Convenios interinstitucionales",
+    "opc3": "Matrícula por créditos",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 57,
+    "title": "Es el programa institucional desde el que se ofrecen cursos, seminarios, talleres, diplomados, etc. de manera gratuita para todos los profesores, independiente del tipo de contrato con la Institución. ",
+    "correctOpc": "Rutas de Formación Docente",
+    "opc1": "Periodo Sabático",
+    "opc2": "Comisión de Estudios ",
+    "opc3": "Escalafón profesoral",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 58,
+    "title": "El descuento en la matrícula que se aplica para los monitores (académicos, de investigación, de extensión, de bienestar universitario, de gestión académica) es del…",
+    "correctOpc": "20%",
+    "opc1": "5%",
+    "opc2": "10%",
+    "opc3": "15%",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 59,
+    "title": "¿En qué bloque están concentrados la mayoría de laboratorios de la USC?",
+    "correctOpc": "Bloque 4",
+    "opc1": "Bloque 3",
+    "opc2": "Bloque 1",
+    "opc3": "La Universidad no tiene Laboratorios",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 60,
+    "title": "¿Por qué son importantes los semilleros de investigación?",
+    "correctOpc": "Fortalecen las competencias investigativas en estudiantes ",
+    "opc1": "Permiten conocer otros lugares de Colombia y el mundo",
+    "opc2": "Son una excusa para no asistir a clases",
+    "opc3": "En la Universidad no existen semilleros de investigación",
+    "points": 5,
+    "week": 4
+  },
+  {
+    "id": 61,
+    "title": "¿Cuántos años tiene la USC en la actualidad?",
+    "correctOpc": "61",
+    "opc1": "60",
+    "opc2": "59",
+    "opc3": "62",
+    "points": 5,
+    "week": 4
+  }
+]
