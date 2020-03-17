@@ -12,8 +12,15 @@
         // Si el id enviado por Get es igual a un id en la base de datos
         if($filas['usu_ide'] == $id){
             // Si las respuesta no es '-', que significa que no ha resuelto nada
-            if($filas['usu_res'] != "-")             
-                echo json_encode(explode("-", $filas['usu_res']));
+            if($filas['usu_res'] != "-")
+                echo json_encode(
+                    array_map(
+                        function ($dato){
+                            return (int) $dato;
+                        }, 
+                        explode("-", $filas['usu_res'])
+                    )
+                );
             else echo json_encode(NULL);
             
             return;
