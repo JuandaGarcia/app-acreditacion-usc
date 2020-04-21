@@ -9,18 +9,18 @@ import PreguntasSemana from './src/screens/PreguntasSemana'
 const App = () => {
 	return (
 		<NativeRouter>
-			<Layout>
-				<Switch>
+			<Switch>
+				<Route
+					exact
+					path="/preguntas-semana/:numero"
+					component={PreguntasSemana}
+				/>
+				<Layout>
 					<Route exact path="/" component={Weeks} />
 					<Route exact path="/scan-qr" component={ScanQR} />
 					<Route exact path="/ranking" component={Ranking} />
-					<Route
-						exact
-						path="/preguntas-semana/:numero"
-						component={PreguntasSemana}
-					/>
-				</Switch>
-			</Layout>
+				</Layout>
+			</Switch>
 		</NativeRouter>
 	)
 }
