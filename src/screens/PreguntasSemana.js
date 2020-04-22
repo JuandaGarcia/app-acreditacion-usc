@@ -11,6 +11,10 @@ import styles from '../styles'
 import { useHistory } from 'react-router-native'
 import Preguntas from '../models/preguntas/Preguntas'
 import { LinearGradient } from 'expo-linear-gradient'
+import {
+	handleAndroidBackButton,
+	removeAndroidBackButtonHandler,
+} from '../components/androidBackButton'
 
 const PreguntasSemana = ({ match }) => {
 	const history = useHistory()
@@ -37,6 +41,13 @@ const PreguntasSemana = ({ match }) => {
 		false,
 		false,
 	])
+
+	useEffect(() => {
+		handleAndroidBackButton(() => history.push('/Weeks'))
+		return () => {
+			removeAndroidBackButtonHandler()
+		}
+	}, [])
 
 	useEffect(() => {
 		setReaspuestas(
@@ -139,7 +150,7 @@ const PreguntasSemana = ({ match }) => {
 			<TouchableHighlight
 				underlayColor="transparent"
 				onPress={() => {
-					history.push(`/`)
+					history.push(`/Weeks`)
 				}}
 			>
 				<View style={styles.backContainer}>

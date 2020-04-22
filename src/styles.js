@@ -67,6 +67,12 @@ const styles = StyleSheet.create({
 		padding: 50,
 		zIndex: 1,
 	},
+	containerLoginRegister: {
+		padding: 50,
+		zIndex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
 	semana: {
 		height: 100,
 		borderRadius: 5,
@@ -303,6 +309,74 @@ const styles = StyleSheet.create({
 	piezaNull: {
 		width: '33%',
 		height: '20%',
+	},
+	logoUSC: {
+		height: 20,
+		width: 20,
+	},
+	inputText: {
+		height: 50,
+		width: '100%',
+		backgroundColor: '#F2F0F0',
+		borderRadius: 5,
+		marginBottom: 15,
+		marginTop: 5,
+		padding: 10,
+	},
+	contenedorBotonRegistro: {
+		height: 50,
+		width: '100%',
+		borderRadius: 5,
+		marginBottom: 15,
+		marginTop: 5,
+	},
+	buttonRegistro: {
+		height: '100%',
+		width: '100%',
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: '#74FF9B',
+		borderRadius: 5,
+		padding: 10,
+	},
+	textbuttonRegistro: {
+		fontWeight: 'bold',
+		color: 'white',
+	},
+	textError: {
+		color: '#FF8557',
+	},
+	text_Header: {
+		fontSize: 40,
+		fontWeight: 'bold',
+		paddingTop: 40,
+		paddingBottom: 10,
+		textAlign: 'center',
+		marginBottom: 25,
+	},
+	avatarsContainer: {
+		width: '100%',
+		height: '35%',
+		display: 'flex',
+		flexDirection: 'row',
+		flexWrap: 'wrap',
+		marginBottom: 50,
+	},
+	avatar: {
+		width: '19%',
+		marginHorizontal: '3%',
+		height: '50%',
+		marginBottom: 25,
+		borderRadius: 5,
+	},
+	avatarImg: {
+		width: '100%',
+		height: '100%',
+	},
+	avatarImgOpacity: {
+		width: '100%',
+		height: '100%',
+		opacity: 0.3,
 	},
 })
 

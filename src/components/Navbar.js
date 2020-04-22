@@ -5,16 +5,16 @@ import { useHistory } from 'react-router-native'
 import { LinearGradient } from 'expo-linear-gradient'
 
 const Navbar = () => {
-  const history = useHistory();
-  const [opacityQR, setOpacityQR] = useState(styles.NavbarIconGray);
-  const [opacityTrofeo, setOpacityTrofeo] = useState(styles.NavbarIconGray);
-  
+	const history = useHistory()
+	const [opacityQR, setOpacityQR] = useState(styles.NavbarIconGray)
+	const [opacityTrofeo, setOpacityTrofeo] = useState(styles.NavbarIconGray)
+
 	return (
 		<View style={styles.containerNavbar}>
 			<TouchableHighlight
 				underlayColor="transparent"
 				onPress={() => {
-					history.push('/scan-qr')
+					history.push('/info')
 					setOpacityQR(styles.NavbarIcon)
 					setOpacityTrofeo(styles.NavbarIconGray)
 				}}
@@ -32,7 +32,7 @@ const Navbar = () => {
 				<TouchableHighlight
 					underlayColor="#8482FF"
 					onPress={() => {
-						history.push('/')
+						history.push('/Weeks')
 						setOpacityQR(styles.NavbarIconGray)
 						setOpacityTrofeo(styles.NavbarIconGray)
 					}}
@@ -59,4 +59,4 @@ const Navbar = () => {
 	)
 }
 
-export default Navbar;
+export default Navbar

@@ -4,19 +4,19 @@ import { LinearGradient } from 'expo-linear-gradient'
 import styles from '../styles'
 import { useHistory } from 'react-router-native'
 
-const Semana = props => {
+const Semana = (props) => {
 	const history = useHistory()
 	const Images = [
 		require('../img/semana1.png'),
 		require('../img/semana2.png'),
 		require('../img/semana3.png'),
-		require('../img/semana4.png')
+		require('../img/semana4.png'),
 	]
 	const Colors = [
 		['#A18CD1', '#FBC2EB'],
 		['#96E6A1', '#D4FC79'],
 		['#FDA085', '#F6D365'],
-		['#66A6FF', '#89F7FE']
+		['#66A6FF', '#89F7FE'],
 	]
 
 	return (
@@ -34,7 +34,7 @@ const Semana = props => {
 			>
 				<View>
 					<Text style={styles.tituloSemana}>Semana {props.numeroSemana}</Text>
-					<Text style={styles.preguntasPorSemana}>5 / 7</Text>
+					<Text style={styles.preguntasPorSemana}>0 / 15</Text>
 				</View>
 				<Image
 					style={styles.imgSemana}
@@ -45,4 +45,4 @@ const Semana = props => {
 	)
 }
 
-export default Semana;
+export default Semana
