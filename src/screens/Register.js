@@ -19,6 +19,7 @@ import {
 } from '../components/androidBackButton'
 import axios from 'axios'
 import { useHistory } from 'react-router-native'
+import jwt_decode from 'jwt-decode'
 
 const Register = () => {
 	const [cedula, setCedula] = useState('')
@@ -54,10 +55,18 @@ const Register = () => {
 
 	useEffect(() => {
 		handleAndroidBackButton(() => setActiveAvatarScreen(false))
+		DatosToken()
 		return () => {
 			removeAndroidBackButtonHandler()
 		}
 	}, [])
+
+	const DatosToken = async () => {
+		const token = await AsyncStorage.getItem('usertoken')
+		if (token !== null) {
+			history.push('/Weeks')
+		}
+	}
 
 	const elegirAvatar = (n) => {
 		setAvatar(n)
