@@ -346,6 +346,10 @@ const styles = StyleSheet.create({
 	textError: {
 		color: '#FF8557',
 	},
+	textErrorAvatar: {
+		color: '#FF8557',
+		marginBottom: 15,
+	},
 	text_Header: {
 		fontSize: 40,
 		fontWeight: 'bold',
@@ -377,6 +381,32 @@ const styles = StyleSheet.create({
 		width: '100%',
 		height: '100%',
 		opacity: 0.3,
+	},
+	iniciarLink: {
+		marginTop: 20,
+		fontSize: 20,
+	},
+	profileHeader: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		marginBottom: 25,
+	},
+	imgProfile: {
+		width: 30,
+		height: 45,
+		marginRight: 15,
+	},
+	ProfileName: {
+		fontSize: 15,
+		fontWeight: 'bold',
+	},
+	NombreAvatar: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 })
 

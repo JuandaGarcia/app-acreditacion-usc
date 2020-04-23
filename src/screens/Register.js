@@ -10,6 +10,7 @@ import {
 	TouchableHighlight,
 	Alert,
 	Picker,
+	AsyncStorage,
 } from 'react-native'
 import styles from '../styles'
 import {
@@ -17,22 +18,25 @@ import {
 	removeAndroidBackButtonHandler,
 } from '../components/androidBackButton'
 import axios from 'axios'
+import { useHistory } from 'react-router-native'
 
 const Register = () => {
 	const [cedula, setCedula] = useState('')
 	const [correo, setCorreo] = useState('')
 	const [nombre, setNombre] = useState('')
-	const [avatar, setAvatar] = useState('')
+	const [avatar, setAvatar] = useState(0)
 	const [contraseña, setContraseña] = useState('')
 	const [facultad, setFacultad] = useState('Facultad de Ingeniería')
 	const [programa, setPrograma] = useState('Otro')
 
 	const [activeAvatarScreen, setActiveAvatarScreen] = useState(false)
+	const [loading, setLoading] = useState(false)
 
 	const [ErrorCedula, setErrorCedula] = useState(false)
 	const [ErrorNombre, setErrorNombre] = useState(false)
 	const [ErrorCorreo, setErrorCorreo] = useState(false)
 	const [ErrorContraseña, setErrorCotraseña] = useState(false)
+	const [ErrorAvatar, setErrorAvatar] = useState(false)
 
 	const [avatarOpacity, setAvatarOpacity] = useState([
 		styles.avatarImg,
@@ -46,6 +50,8 @@ const Register = () => {
 	])
 	const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/
 
+	const history = useHistory()
+
 	useEffect(() => {
 		handleAndroidBackButton(() => setActiveAvatarScreen(false))
 		return () => {
@@ -56,13 +62,21 @@ const Register = () => {
 	const elegirAvatar = (n) => {
 		setAvatar(n)
 		const ArrayModificado = avatarOpacity.map((style, index) => {
-			if (n !== index) {
+			if (n - 1 !== index) {
 				return styles.avatarImgOpacity
 			} else {
 				return styles.avatarImg
 			}
 		})
 		setAvatarOpacity(ArrayModificado)
+	}
+
+	const ValidarAvatar = () => {
+		if (avatar) {
+			PostData()
+		} else {
+			setErrorAvatar(true)
+		}
 	}
 
 	const Validacion = () => {
@@ -97,69 +111,94 @@ const Register = () => {
 		}
 	}
 
-	/* const PostData = async () => {
+	const PostData = async () => {
+		setLoading(true)
 		await axios
-			.post('users/register', {
-				username: user,
-				email: email.toLowerCase(),
-				password: password,
+			.post('http://161.35.9.64/usuario/registro', {
+				cedula: cedula,
+				email: correo.toLowerCase(),
+				avatar: avatar,
+				nombre: nombre,
+				contrasenia: contraseña,
+				programa: programa,
+				facultad: facultad,
 			})
 			.then((response) => {
 				const data = response.data
-				if (data.status === `${email} Registered!`) {
+				if (data.status === `${correo.toLowerCase()} registrado con exito!`) {
 					console.log('Registered')
 					axios
-						.post('users/login', {
-							email: email.toLowerCase(),
-							password: password,
+						.post('http://161.35.9.64/usuario/ingreso', {
+							email: correo.toLowerCase(),
+							contrasenia: contraseña,
 						})
 						.then((response) => {
-							localStorage.setItem('usertoken', response.data)
-							props.history.push(`/welcome`)
+							AsyncStorage.setItem('usertoken', response.data)
+							history.push('/Weeks')
+							/* console.log('funciono!!!!!!!!!')
+							console.log(response.data) */
 							return response.data
 						})
 						.catch((err) => {
 							console.log(err)
-							Swal.fire({
-								position: 'center',
-								icon: 'error',
-								title: `Ocurrió un error al iniciar sesión por favor intenta mas tarde.`,
-								showConfirmButton: false,
-								timer: 3000,
-							})
+							Alert.alert(
+								'Error',
+								'Ocurrió un error al registrarse por favor intenta mas tarde.',
+								[
+									{
+										text: 'Aceptar',
+										onPress: () => {},
+									},
+								],
+								{ cancelable: false }
+							)
 						})
 				}
 				if (data.error) {
-					if (data.error === 'User already exists') {
-						Swal.fire({
-							position: 'center',
-							icon: 'warning',
-							title: `${email} ya se encuentra registrado.`,
-							showConfirmButton: false,
-							timer: 3000,
-						})
+					if (data.error === 'El usuario ya existe...') {
+						Alert.alert(
+							'Error',
+							`${correo} ya se encuentra registrado.`,
+							[
+								{
+									text: 'Aceptar',
+									onPress: () => {},
+								},
+							],
+							{ cancelable: false }
+						)
 					} else {
-						Swal.fire({
-							position: 'center',
-							icon: 'error',
-							title: `Ocurrió un error intenta mas tarde.`,
-							showConfirmButton: false,
-							timer: 3000,
-						})
+						Alert.alert(
+							'Error',
+							`Ocurrió un error intenta mas tarde.`,
+							[
+								{
+									text: 'Aceptar',
+									onPress: () => {},
+								},
+							],
+							{ cancelable: false }
+						)
 					}
 				}
 			})
-	} */
+		setLoading(false)
+	}
 
 	if (activeAvatarScreen) {
 		return (
 			<View style={styles.containerLoginRegister}>
 				<Text style={styles.text_Header}>Selecciona tu avatar</Text>
+				{ErrorAvatar ? (
+					<Text style={styles.textErrorAvatar}>
+						Por favor selecciona un avatar
+					</Text>
+				) : null}
 				<View style={styles.avatarsContainer}>
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(0)
+							elegirAvatar(1)
 						}}
 						style={styles.avatar}
 					>
@@ -171,7 +210,7 @@ const Register = () => {
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(1)
+							elegirAvatar(2)
 						}}
 						style={styles.avatar}
 					>
@@ -183,7 +222,7 @@ const Register = () => {
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(2)
+							elegirAvatar(3)
 						}}
 						style={styles.avatar}
 					>
@@ -195,7 +234,7 @@ const Register = () => {
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(3)
+							elegirAvatar(4)
 						}}
 						style={styles.avatar}
 					>
@@ -207,7 +246,7 @@ const Register = () => {
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(4)
+							elegirAvatar(5)
 						}}
 						style={styles.avatar}
 					>
@@ -219,7 +258,7 @@ const Register = () => {
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(5)
+							elegirAvatar(6)
 						}}
 						style={styles.avatar}
 					>
@@ -231,7 +270,7 @@ const Register = () => {
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(6)
+							elegirAvatar(7)
 						}}
 						style={styles.avatar}
 					>
@@ -243,7 +282,7 @@ const Register = () => {
 					<TouchableHighlight
 						underlayColor="rgba(0,0,0,0.0)"
 						onPress={() => {
-							elegirAvatar(7)
+							elegirAvatar(8)
 						}}
 						style={styles.avatar}
 					>
@@ -253,15 +292,21 @@ const Register = () => {
 						/>
 					</TouchableHighlight>
 				</View>
-				<View style={styles.contenedorBotonRegistro}>
-					<TouchableHighlight
-						underlayColor="#32CF5E"
-						style={styles.buttonRegistro}
-						onPress={() => {}}
-					>
-						<Text style={styles.textbuttonRegistro}>Registrarse</Text>
-					</TouchableHighlight>
-				</View>
+				{loading ? (
+					<ActivityIndicator size="large" color="#32CF5E" />
+				) : (
+					<View style={styles.contenedorBotonRegistro}>
+						<TouchableHighlight
+							underlayColor="#32CF5E"
+							style={styles.buttonRegistro}
+							onPress={() => {
+								ValidarAvatar()
+							}}
+						>
+							<Text style={styles.textbuttonRegistro}>Registrarse</Text>
+						</TouchableHighlight>
+					</View>
+				)}
 			</View>
 		)
 	}
@@ -372,6 +417,14 @@ const Register = () => {
 					<Text style={styles.textbuttonRegistro}>Siguiente</Text>
 				</TouchableHighlight>
 			</View>
+			<TouchableHighlight
+				underlayColor="rgba(0,0,0,0.0)"
+				onPress={() => {
+					history.push('/login')
+				}}
+			>
+				<Text style={styles.iniciarLink}>Inciar sesión</Text>
+			</TouchableHighlight>
 		</View>
 	)
 }

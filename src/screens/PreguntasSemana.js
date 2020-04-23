@@ -6,6 +6,7 @@ import {
 	TouchableHighlight,
 	ScrollView,
 	Alert,
+	AsyncStorage,
 } from 'react-native'
 import styles from '../styles'
 import { useHistory } from 'react-router-native'
@@ -15,6 +16,8 @@ import {
 	handleAndroidBackButton,
 	removeAndroidBackButtonHandler,
 } from '../components/androidBackButton'
+import axios from 'axios'
+import jwt_decode from 'jwt-decode'
 
 const PreguntasSemana = ({ match }) => {
 	const history = useHistory()
@@ -41,8 +44,10 @@ const PreguntasSemana = ({ match }) => {
 		false,
 		false,
 	])
+	const [correo, setCorreo] = useState('')
 
 	useEffect(() => {
+		DatosToken()
 		handleAndroidBackButton(() => history.push('/Weeks'))
 		return () => {
 			removeAndroidBackButtonHandler()
@@ -64,6 +69,67 @@ const PreguntasSemana = ({ match }) => {
 			preguntas.buscarPorSemana(semana)[PreguntaActual].correctOpc
 		)
 	}, [PreguntaActual])
+
+	const DatosToken = async () => {
+		const token = await AsyncStorage.getItem('usertoken')
+		if (token !== null) {
+			const decoded = jwt_decode(token)
+			setCorreo(decoded.cedula)
+			GetUserResueltas()
+		}
+	}
+
+	const GetUserResueltas = async () => {
+		await axios
+			.get('http://161.35.9.64/usuario/resueltas', {
+				email: correo,
+			})
+			.then((response) => {
+				const data = response.data
+				console.log(data)
+			})
+			.catch((err) => {
+				console.log(err)
+				Alert.alert(
+					'Error',
+					'Ocurrió un error al enviar la información',
+					[
+						{
+							text: 'Aceptar',
+							onPress: () => {},
+						},
+					],
+					{ cancelable: false }
+				)
+			})
+	}
+
+	const PostResuelta = async (id, state) => {
+		await axios
+			.put('http://161.35.9.64/usuario/resueltas', {
+				email: correo,
+				resueltas: {
+					id: id,
+					state: state,
+				},
+			})
+			.then((response) => {
+				const data = response.data
+				if (data.error) {
+					Alert.alert(
+						'Error',
+						'Ocurrió un error al enviar la información',
+						[
+							{
+								text: 'Aceptar',
+								onPress: () => {},
+							},
+						],
+						{ cancelable: false }
+					)
+				}
+			})
+	}
 
 	const Respuesta = (props) => {
 		return (
@@ -90,6 +156,7 @@ const PreguntasSemana = ({ match }) => {
 			})
 			setPintarPuzzle(ArrayModificado)
 			console.log(PreguntaActual)
+			PostResuelta(preguntas.buscarPorSemana(semana)[PreguntaActual].id, true)
 			Alert.alert(
 				'Correcto!! 😎',
 				'Desbloqueaste una nueva ficha del Puzzle.',
@@ -104,6 +171,7 @@ const PreguntasSemana = ({ match }) => {
 				{ cancelable: false }
 			)
 		} else {
+			PostResuelta(preguntas.buscarPorSemana(semana)[PreguntaActual].id, false)
 			Alert.alert(
 				'Fallaste 😪',
 				'Más suerte la próxima vez.',
